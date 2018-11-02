@@ -1,14 +1,22 @@
-var string = "sdhfodsjfojoijeoia";
-var num_1 = 1234567; 
-var num_2 = 3949532.32524;
-var true_or_false = false;
-var this_thing_is_null = null;
-var this_is_undefined = undefined;
+function BelligerentMagicEightBall() {
+	this.answers_array = [
+		"Nope", "NO!!!", "Ask Again", "Ask Later",
+		"Of Course Not", "Stop Shaking Me!",
+		"Just Forget About It", "Sleep On it",
+		"Why Not", "Try your Horoscope", 
+		"Aren't You Needy", 
+		"We've All Got Better Things To Do"
+	];
 
-function Person() {
-	this.name = "Johnathan";
-};
+	this.shake = function(){
+		var randomNumber = Math.floor(Math.random() * 12);
+		var answer = this.answers_array[randomNumber];
+		
+		console.log(answer);
+	}
+}
 
-var johnathan = new Person();
 
-console.log(johnathan.name);
+var eightBall = new BelligerentMagicEightBall();
+
+eightBall.shake();
